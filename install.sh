@@ -9,14 +9,14 @@ mkdir Downloads
 sleep 1
 echo "Попытка входа в $(pwd)/Downloads/"
 cd $(pwd)/Downloads
-echo "Успешный вход в $(pwd)/Downloads/"
+echo "Успешный вход в $(pwd)"
 sleep 1
 echo "Клонирование AUR репозитория yay."
 git clone https://aur.archlinux.org/yay.git
 echo "Клонирование репозитория завершено."
-echo "Попытка входа в $(pwd)/Downloads/yay/"
+echo "Попытка входа в $(pwd)/yay/"
 cd yay
-echo "Успешный вход в $(pwd)/Downloads/yay/"
+echo "Успешный вход в $(pwd)"
 echo "Запуск установки пакета yay..."
 makepkg -si
 echo "Пакет yay успешно установлен."
