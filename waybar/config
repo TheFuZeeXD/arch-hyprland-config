@@ -1,0 +1,110 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 25,
+    "spacing": 4,
+    "modules-left": [
+        "custom/launcher",
+        "hyprland/window",
+        "hyprland/submap"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "custom/media",
+        "pulseaudio",
+        "cpu",
+        "network",
+        "battery",
+        "tray",
+        "clock",
+        "custom/power"
+    ],
+    "custom/media": {
+        "format": "󰎈 {}",
+        "exec": "playerctl -p chromium.instance2285 metadata --format '{{artist}} - {{title}}' 2>/dev/null || echo 'No media'",
+        "interval": 1,
+        "on-click": "playerctl -p chromium.instance2285 play-pause",
+        "on-click-right": "playerctl -p chromium.instance2285 next",
+        "on-scroll-up": "playerctl -p chromium.instance2285 volume 0.05+",
+        "on-scroll-down": "playerctl -p chromium.instance2285 volume 0.05-",
+        "max-length": 20,
+        "escape": true
+    },
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": "🖥",
+            "2": "🛡",
+            "3": "🏷",
+            "4": "📖",
+            "5": "🔨",
+            "urgent": "📂",
+            "focused": "",
+            "default": "📁"
+        }
+    },
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 35,
+        "rewrite": {
+            "": "Hyprland@YouName"
+        },
+        "separate-outputs": true
+    },
+    "clock": {
+        "format": "{:%H:%M}"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": " Muted",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "default": [
+                "",
+                ""
+            ]
+        },
+        "scroll-step": 5
+    },
+    "network": {
+        "format-wifi": " {essid} ({signalStrength}%)",
+        "format-ethernet": " {ifname}",
+        "format-linked": " {ifname} (No IP)",
+        "format-disconnected": "⚠ Disconnected",
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "cpu": {
+        "format": " {usage}%",
+        "interval": 5
+    },
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "format-charging": " {capacity}%",
+        "format-full": " Full",
+        "interval": 10
+    },
+    "tray": {
+        "spacing": 8
+    },
+    "custom/launcher": {
+        "format": "",
+        "on-click": "wofi --show drun"
+    },
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "wlogout"
+    }
+}
