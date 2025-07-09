@@ -1,0 +1,113 @@
+window#waybar {
+    background: rgba(30, 30, 46, 0.0);
+    color: #cdd6f4;
+}
+
+#window {
+    font-family:sans-serif;
+    font-weight:900;
+    font-size:15px;
+    color: #89b4fa;
+    padding: 0 10px;
+    margin: 0 2px;
+    margin-top:7px;
+}
+
+#workspaces button {
+    margin:2px;
+    margin-top:7px;
+    padding: 4px 7px;
+    color: #6c7086;
+}
+
+#workspaces button.active {
+    color: #89b4fa;
+    background: rgba(90, 113, 150, 0.4);
+}
+
+#workspaces button:hover  {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+#clock, #battery, #cpu, #memory, #disk, #network, #pulseaudio, #bluetooth, #tray,  #custom-launcher, #custom-power {
+    border-radius:10px;
+    padding: 0 10px;
+    margin: 0 2px; 
+    margin-top:7px;
+    font-family: "sans-serif";
+    font-size: 12px;
+    font-weight:500;
+}
+
+
+#battery.critical {
+    color: #f38ba8;
+    animation: blink 1s infinite;
+}
+
+#custom-power {
+    border-radius:10px;
+    padding: 3px 10px;
+    transition: all 0.3s ease;
+}
+
+#custom-power:hover {
+    background: rgba(63, 73, 89, 0.76);
+}
+
+#custom-launcher {
+    border-radius:10px;
+    transition: all 0.3s ease;
+}
+
+#custom-launcher:hover {
+    background: rgba(63, 73, 89, 0.76);
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+#custom-media {
+    border-radius:10px;
+    padding: 0 10px;
+    margin: 0 2px;
+    margin-top:7px;
+    font-family: "sans-serif";
+    font-size: 12px;
+    font-weight:500;
+    transition: all 0.3s ease;
+}
+
+#custom-media:hover {
+    background: rgba(63, 73, 89, 0.76);
+}
+
+#custom-media span {
+    color: #cdd6f4;
+    font-weight: bold;
+}
+
+tooltip #custom-media {
+    padding: 0;
+}
+
+tooltip label {
+    font-family: "JetBrains Mono", "Fira Code", monospace;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #585b70;
+    padding:12px;
+    border-radius: 8px;
+    min-width: 300px;
+}
+
+tooltip image.cover {
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+tooltip label .info {
+    margin-top: 8px;
+    color: #a6adc8;
+}
